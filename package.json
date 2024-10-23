@@ -1,0 +1,23 @@
+{
+  "name": "WebCrawlingAgent",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Alexuiuc/WebCrawlingAgent.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Alexuiuc/WebCrawlingAgent/issues"
+  },
+  "homepage": "https://github.com/Alexuiuc/WebCrawlingAgent#readme",
+  "devDependencies": {
+    "electron": "^33.0.2"
+  }
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Rufus-AI Powered Crawler</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+    #crawler-container {
+      text-align: center;
+    }
+    input[type="text"] {
+      width: 400px;
+      padding: 10px;
+      font-size: 16px;
+    }
+    select {
+      margin-top: 10px;
+      padding: 10px;
+      font-size: 16px;
+    }
+    button {
+      margin-top: 10px;
+      padding: 10px 20px;
+      font-size: 16px;
+    }
+    #output {
+      margin-top: 20px;
+      font-size: 18px;
+      color: green;
+    }
+  </style>
+</head>
+<body>
+  <div id="crawler-container">
+    <h1>Rufus-AI Powered Crawler</h1>
+    <input type="text" id="prompt-input" placeholder="Enter your prompt..."><br>
+    <select id="model-selection">
+      <option value="gpt-3">GPT-3</option>
+      <option value="gpt-4">GPT-4</option>
+      <option value="llama">LLaMA</option>
+    </select><br>
+    <button onclick="sendToBackend()">Submit</button>
+    <div id="output"></div>
+  </div>
+
+  <script>
+    async function sendToBackend() {
+      const prompt = document.getElementById('prompt-input').value;
+      const model = document.getElementById('model-selection').value;
+      
+      try {
+        const response = await fetch('http://127.0.0.1:5000/process', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ prompt: prompt, model: model }),  // Send prompt and model selection
+        });
+
+        const result = await response.json();
+        document.getElementById('output').textContent = result.result;  // Display result in the HTML
+      } catch (error) {
+        document.getElementById('output').textContent = 'Error: ' + error;
+      }
+    }
+  </script>
+</body>
+</html>
