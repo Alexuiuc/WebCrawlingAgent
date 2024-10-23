@@ -1,0 +1,39 @@
+/* styles.css */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  #crawler-container {
+    text-align: center;
+  }
+  
+  input[type="text"] {
+    width: 400px;
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 16px;
+  }
+  
+  select {
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 16px;
+  }
+  
+  button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+  
+  #output {
+    margin-top: 20px;
+    font-size: 18px;
+    color: green;
+  }
+  
