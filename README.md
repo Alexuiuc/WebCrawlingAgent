@@ -1,6 +1,6 @@
-# **Rufus AI-Powered Web Crawler**
+# **AI-Powered Web Crawler**
 
-**Rufus** is an AI-powered web crawler that scrapes, analyzes, and extracts content from web pages based on user-defined prompts. It uses OpenAI's GPT-3.5 to find relevant links, extract content, and identify dynamic elements for interaction.
+**AI Octopus** is an AI-powered web crawler. A small tool to crawl data from a website.
 
 ## **Features**
 
@@ -20,16 +20,16 @@ Before you begin, ensure you have the following installed:
 
 ### 1. **Clone the Repository**
 ```bash
-git clone https://github.com/your-username/rufus-ai-web-crawler.git
-cd rufus-ai-web-crawler
+git clone git@github.com:Alexuiuc/WebCrawlingAgent.git
+cd WebCrawlingAgent
 ```
 ### 2. **Set Up a Virtual Environment**
 ```bash
-python3 -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
+conda create --name AIOctopus python=3.9
 ```
 ### 3. **Install Dependencies**
 ```bash
+
 pip install -r requirements.txt
 playwright install
 ```

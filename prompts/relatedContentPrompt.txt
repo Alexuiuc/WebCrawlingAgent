@@ -1,0 +1,1 @@
+ f"User prompt: {prompt}\nHere is the full text from the HTML page: {all_text}. What content is relevant to the user's prompt?"
