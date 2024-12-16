@@ -193,3 +193,6 @@ output.txt
 *.tmp
 *.swp
 *.bak
+
+# json
+*.json_error
